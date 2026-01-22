@@ -1,4 +1,5 @@
 package org.example;
+
     /**
      * TIPS methods -> Start, run, sleep, join, SetPriority, interrupt, yield, setDaemon(True),
      */
@@ -8,7 +9,7 @@ public class MyThread extends Thread  {
             }
             @Override
             public void run() {
-                for(int i=0; i< 5; i++) {
+                for(int i=0; i< 55; i++) {
                         System.out.println(Thread.currentThread().getName()+" -- COUNT - "+i); //+"  -- RUNNING State Priority --> "+Thread.currentThread().getPriority());
                         Thread.yield();  // current give chance to run other threads
                 }
@@ -43,7 +44,8 @@ public class MyThread extends Thread  {
         medium.start();
 
 
-        /*  state in a thread
+        /*
+        //  state in a thread
         Thread t1 = new MyThread();
         Thread.State threadState = t1.getState();
         System.out.printf("Currently Thread is in %s state\n", threadState);  //NEW State
